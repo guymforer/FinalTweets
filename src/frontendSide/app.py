@@ -63,16 +63,6 @@ def tweets_distribution():
 
 
 
-# @app.route('/token_analysis', methods=['POST'])
-# def token_analysis():
-#     # Extract tokens from form data.
-#     tokens = request.form['tokens']
-#     # Request token analysis from the backend service.
-#     response = requests.get(f"http://backend-service:5000/token_analysis?tokens={tokens}", stream=True)
-    
-#     # Return the image response directly to the client.
-#     return Response(response.content, content_type=response.headers['Content-Type'])
-
 if __name__ == '__main__':
     # Start the Flask application on the specified host and port, making it accessible across the network.
     app.run(host='0.0.0.0', port=80)
