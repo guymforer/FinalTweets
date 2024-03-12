@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Twitter Insights</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5; /* Updated background color */
+            color: #343a40; /* Dark gray text for better readability */
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px; /* Spacing between elements */
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #007bff; /* Bright blue for headings */
+            margin-bottom: 15px;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            border: 2px solid #ced4da;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:hover,
+        input[type="text"]:focus {
+            border-color: #007bff; /* Highlight border on hover/focus */
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #28a745; /* Green background */
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase; /* Make button text uppercase */
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 960px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Twitter Insight Explorer</h2>
+        <form action="/digest" method="post">
+            <label for="tokens">Author's Name:</label>
+            <input type="text" id="tokens" name="tokens" placeholder="Enter author's Twitter handle">
+            <button type="submit">Analyze Sentiments</button>
+        </form>
+
+        <form action="/show_dist" method="post">
+            <button type="submit">Tweet Distribution Insights</button>
+        </form>
+
+        <form action="/show_tweets" method="post">
+            <button type="submit">Top Tweets Performance</button>
+        </form>
+
+        <form action="/show_users" method="post">
+            <button type="submit">Active Users Ranking</button>
+        </form>
+
+        <form action="/show_tweets" method="post">
+            <label for="tokens">Token Name:</label>
+            <input type="text" id="tokens" name="tokens" placeholder="Enter keyword or hashtag">
+            <button type="submit">Search Insights</button>
+        </form>
+
+        <!-- Example of a content card for displaying analysis results -->
+        <div class="card">
+            <h3>Analysis Overview</h3>
+            <p>Insightful data and trends from Twitter analytics will appear here. Dive into sentiment analysis, tweet distributions, top tweets, and much more.</p>
+        </div>
+    </div>
+</body>
+</html>
